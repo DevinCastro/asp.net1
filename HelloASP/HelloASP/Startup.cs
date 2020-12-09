@@ -32,6 +32,8 @@ namespace HelloASP
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+               
+                
             }
             else
             {

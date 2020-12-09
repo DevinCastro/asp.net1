@@ -20,9 +20,15 @@ namespace HelloASP.Controllers
 
 
         [HttpGet("about")]
-        public string About()
+        public ViewResult About()
         {
-            return "This is the about page";
+            return View();
+        }
+
+        [HttpGet("contact")]
+        public ViewResult Contact()
+        {
+            return View();
         }
 
         [HttpGet("users/{username}")]
