@@ -13,7 +13,7 @@ namespace HelloASP.Controllers
     {
 
         [HttpGet("")]
-        public ViewResult Index()
+        public IActionResult Index()
         {
             return View();
         }
@@ -26,9 +26,9 @@ namespace HelloASP.Controllers
         }
 
         [HttpGet("users/{username}")]
-        public string Username(string username)
+        public IActionResult Username(string username)
         {
-            return $"whats up {username}?";
+            return Json(new {user=username, text = "hello"});
         }
 
 
